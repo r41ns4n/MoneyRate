@@ -82,9 +82,12 @@ public class RateDB {
     // OVERRIDE TOSTRING
     @Override
     public String toString() {
-        return "RateDB{" +
-                "RateList=" + rateList +
-                '}';
+        StringBuilder stringBuilder = new StringBuilder("Zeitstempel" + "Rate In Euro\n");
+
+        for (Rate rate: rateList) {
+            stringBuilder.append(rate.toString() + String.format("%n"));
+        }
+        return stringBuilder.toString();
     }
 
 } // END CLASS RATEDB
